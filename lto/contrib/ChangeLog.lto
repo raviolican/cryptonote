@@ -1,0 +1,8 @@
+2009-10-03  Richard Guenther  <rguenther@suse.de>
+
+	* gcc_update (lto-plugin/aclocal.m4): Remove rule.
+
+2009-02-17  H.J. Lu  <hongjiu.lu@intel.com>
+
+	PR lto/39216
+	* gcc_update: Adjust file timestamps for lto-plugin.

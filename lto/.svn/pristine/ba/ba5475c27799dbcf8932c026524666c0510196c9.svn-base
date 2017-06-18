@@ -1,0 +1,66 @@
+2009-09-29  Ian Lance Taylor  <iant@google.com>
+	    Diego Novillo  <dnovillo@google.com>
+
+	* configure.ac (extra_host_libiberty_configure_flags):
+	Set to --enable-shared.
+	* Makefile.def: For libiberty, set extra_configure_flags
+	to @extra_host_libiberty_configure_flags@.
+	* configure: Regenerate.
+	* Makefile.in: Regenerate.
+
+2009-09-14  Diego Novillo  <dnovillo@google.com>
+
+	* configure.ac: Add link test to check for some of the
+	libelf functions used.
+	Tidy some formatting.
+	* configure: Regenerate.
+
+2009-07-09  Rainer Orth  <ro@TechFak.Uni-Bielefeld.DE>
+
+	PR bootstrap/39022
+	* configure.ac: Don't unconditionally add lto-plugin to configdirs.
+	* configure: Regenerate.
+
+2009-06-08  Diego Novillo  <dnovillo@google.com>
+
+	* configure.ac: Also look for libelf.h in /usr/include/libelf.
+	Only substitute libelflibs and libelfinc after testing
+	which variant is present.
+	* configure: Regenerate.
+
+2009-05-20  Diego Novillo  <dnovillo@google.com>
+
+	* configure.ac (host_libs): Remove lto-plugin.
+	Add --enable-lto.
+	Add --with-libelf, --with-libelf-include and --with-libelf-lib.
+	If --enable-lto is used, add 'lto' to new_enable_languages.
+	If --enable-lto is used and gold is enabled, add
+	lto-plugin to configdirs.
+	* Makefile.tpl (HOST_EXPORTS): Add LIBELFLIBS and LIBELFINC.
+	(HOST_LIBELFLIBS): Define.
+	(HOST_LIBELFINC): Define.
+	* configure: Regenerate.
+	* Makefile.in: Regenerate.
+
+2009-05-13  Simon Baldwin  <simonb@google.com>
+
+	* configure.ac: If --with-system-zlib, suppress local zlib and
+	pass --with-system-zlib to subdir configure scripts.
+	* configure: Regenerate.
+
+2009-02-05  Rafael Avila de Espindola  <espindola@google.com>
+
+	* Makefile.def: all-lto-plugin depends on all-libiberty.
+	* Makefile.in: Regenerate.
+
+2008-09-04  Rafael Avila de Espindola  <espindola@google.com>
+
+	* Makefile.def: set bootstrap=true for lto-plugin.
+	* Makefile.in: Regenerate.
+
+2008-08-21  Rafael Espindola  <espindola@google.com>
+
+	* Makefile.def (host_modules): Add lto-plugin.
+	* Makefile.in: Update.
+	* configure: Update.
+	* configure.ac (host_libs): Add lto-plugin.

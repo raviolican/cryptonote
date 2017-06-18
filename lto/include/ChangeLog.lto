@@ -1,0 +1,29 @@
+2009-10-02  Diego Novillo  <dnovillo@google.com>
+
+	* lto-symtab.h: Update copyright boilerplate.
+	* plugin-api.h: Likewise.
+
+2009-09-28  Diego Novillo  <dnovillo@google.com>
+
+	* libiberty.h (make_cwd_temp_file): Remove.
+
+2009-06-18  Diego Novillo  <dnovillo@google.com>
+
+	* lto-symtab.h: Add multiple inclusion guards.
+
+2008-11-18  Diego Novillo  <dnovillo@google.com>
+
+	* plugin-api.h (enum ld_plugin_symbol_resolution):
+	Document each value.
+
+2008-10-30  Simon Baldwin  <simonb@google.com>
+
+	* libiberty.h (make_cwd_temp_file): New declaration.
+
+2008-09-23  Rafael Espindola  <espindola@google.com>
+
+	* plugin-api.h: Moved from lto-plugin.
+
+2008-08-21  Rafael Espindola  <espindola@google.com>
+
+	* lto-symtab.h: New.

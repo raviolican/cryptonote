@@ -1,0 +1,935 @@
+2009-10-02  Richard Guenther  <rguenther@suse.de>
+
+	* g++.dg/lto/20091002-1_0.C: New testcase.
+	* g++.dg/lto/20091002-2_0.C: Likewise..
+	* g++.dg/lto/20091002-3_0.C: Likewise..
+
+2009-10-02  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.c-torture/execute/builtins/builtins.exp: Re-enable
+	LTO testing.
+
+2009-10-01  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/lto.exp: Fix copyright years.
+	* g++.dg/lto/lto.exp: Likewise.
+	* lib/lto.exp: Likewise.
+
+2009-09-30  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/README: Fix names of dg-* commands.
+	* g++.dg/lto/README: Likewise.
+
+2009-09-29  Richard Guenther  <rguenther@suse.de>
+
+	* g++.dg/20090107-1.C: Require LTO.
+	* g++.dg/20090121-1.C: Likewise.
+
+2009-09-29  Richard Guenther  <rguenther@suse.de>
+
+	* gcc.dg/visibility-7.c: Revert changes.
+
+2009-09-29  Richard Guenther  <rguenther@suse.de>
+
+	* lib/torture-options.exp: Do not append an empty option.
+
+2009-09-28  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.c-torture/execute/builtins/builtins.exp: Do not use
+	LTO_TORTURE_OPTIONS.
+	* gcc.misc-tests/dectest.exp: Likewise.
+	* gcc.target/x86_64/abi/abi-x86_64.exp: Likewise.
+	* gcc.target/x86_64/abi/avx/abi-avx.exp: Likewise.
+	* lib/fortran-torture.exp: Likewise.
+	* lib/gfortran-dg.exp: Likewise.
+	* lib/c-torture.exp: Only use '-O2 -flto' and '-O2 -fwhopr' in
+	LTO_TORTURE_OPTIONS.
+	* lib/gcc-dg.exp: Likewise.
+	* lib/target-supports.exp (check_effective_target_lto): Test
+	if ENABLE_LTO is set instead of doing a compile test.
+
+2009-09-22  Richard Guenther  <rguenther@suse.de>
+
+	PR testsuite/41380
+	* lib/lto.exp (lto-execute): Remove executables.
+
+2009-09-15  Richard Guenther  <rguenther@suse.de>
+
+	PR lto/41230
+	* gcc.dg/lto/20090914_0.c: New testcase.
+
+2009-09-14  Richard Guenther  <rguenther@suse.de>
+
+	* gcc.misc-tests/i386-prefetch.exp: Revert to trunk state.
+	* gcc.dg/exceptions.c: Remove.
+
+2009-09-01  Richard Guenther  <rguenther@suse.de>
+
+	PR lto/41199
+	* gcc.dg/20081223-1.c: Conditionalize -fwhopr on target lto.
+
+2009-08-15  Richard Guenther  <rguenther@suse.de>
+
+	PR lto/41069
+	* gfortran.dg/lto/lto.exp: Adjust glob pattern.
+	* gfortran.dg/lto/pr41069_0.f90: New testcase.
+	* gfortran.dg/lto/pr41069_1.f90: Likewise.
+	* gfortran.dg/lto/pr41069_2.f90: Likewise.
+
+2009-08-13  Richard Guenther  <rguenther@suse.de>
+
+	PR lto/41032
+	* gcc.dg/lto/20090812_0.c: New testcase.
+	* gcc.dg/lto/20090812_1.c: Likewise.
+
+2009-07-30  Richard Guenther  <rguenther@suse.de>
+
+	PR lto/40903
+	* gcc.dg/lto/20090729_0.c: New testcase.
+	* gcc.dg/lto/20090729_1.c: Likewise.
+
+2009-07-23  Ben Elliston  <bje@au.ibm.com>
+
+	PR lto/40818
+	* g++.dg/lto/pr40818_0.C: New.
+
+2009-07-17  Richard Guenther  <rguenther@suse.de>
+
+	PR lto/40765
+	* gcc.dg/lto/20090717_0.c: New testcase.
+	* gcc.dg/lto/20090717_1.c: Likewise.
+
+2009-07-15  Ben Elliston  <bje@au.ibm.com>
+
+	PR lto/40725
+	* gfortran.dg/lto/pr40725_0.f03: New.
+	* gfortran.dg/lto/pr40725_1.c: Likewise.
+
+2009-07-14  Ben Elliston  <bje@au.ibm.com>
+
+	* lib/lto.exp (lto-execute): Allow second and subsequent source
+	files in a test to have any filename extension.
+
+2009-07-14  Ben Elliston  <bje@au.ibm.com>
+
+	* gfortran.dg/lto/lto.exp: Match {f,F}{,90,95,03,08}, not just .f.
+
+2009-07-14  Ben Elliston  <bje@au.ibm.com>
+
+	* gfortran.dg/lto/lto.exp: New.
+	* gfortran.dg/lto/pr40724_0.f: Likewise.
+	* gfortran.dg/lto/pr40724_1.f: Likewise.
+
+2009-07-10  Diego Novillo  <dnovillo@google.com>
+
+	* lib/gfortran-dg.exp: Add LTO torture options.
+	* lib/fortran-torture.exp: Likewise.
+
+2009-07-07  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.c-torture/execute/builtins/lib/strcat.c: Declare
+	functions with __attribute__ ((__noinline__))
+	* gcc.c-torture/execute/builtins/lib/strstr.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strncpy.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/printf.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/abs.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/memmove.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strchr.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strlen.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strcmp.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/fprintf.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/mempcpy.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/memchr.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strncat.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/memcmp.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/bzero.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/stpcpy.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strcpy.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/sprintf.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strncmp.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strpbrk.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strrchr.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/bfill.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strspn.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/memset.c: Likewise.
+	* gcc.c-torture/execute/builtins/lib/strcspn.c: Likewise.
+
+2009-07-06  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20090706-1_0.c: New test.
+	* gcc.dg/lto/20090706-2_0.c: New test.
+
+2009-07-06  Janis Johnson  <janis187@us.ibm.com>
+
+	* lib/lto.exp (proc_lto_obj): Use assemble, not compile.
+	(lto-get-options-main): Handle dg-lto-options instead of dg-options
+	and dg-lto-do instead of dg-do.  Use "assemble" instead of "compile"
+	with dg-lto-do.
+	* lib/gcc-dg.exp (gcc-dg-runtest): Use less confusing syntax for
+	an empty list.
+	* gcc.dg/lto/README: Use assemble instead of compile.
+	* gcc.dg/lto/20090206-1_0.c: Use dg-lto-link, dg-lto-options; add
+	dg-skip-if.
+	* gcc.dg/lto/20090206-2_0.c: Ditto.
+	* gcc.dg/lto/20081115_0.c: Use renamed option.
+	* gcc.dg/lto/20081118_0.c: Ditto.
+	* gcc.dg/lto/20080908_0.c: Ditto.
+	* gcc.dg/lto/20081120-1_0.c: Ditto.
+	* gcc.dg/lto/20081201-1_0.c: Ditto.
+	* gcc.dg/lto/20081120-2_0.c: Ditto.
+	* gcc.dg/lto/20081201-2_0.c: Ditto.
+	* gcc.dg/lto/20090312_0.c: Ditto.
+	* gcc.dg/lto/20090116_0.c: Ditto.
+	* gcc.dg/lto/20081126_0.c: Use renamed options and dg-skip-if.
+	* gcc.dg/lto/20080917_0.c: Use renamed option.
+	* gcc.dg/lto/20090120_0.c: Ditto.
+	* gcc.dg/lto/20081212-1_0.c: Ditto.
+	* gcc.dg/lto/20090126-1_0.c: Ditto.
+	* gcc.dg/lto/20090126-2_0.c: Ditto.
+	* gcc.dg/lto/20080924_0.c: Ditto.
+	* gcc.dg/lto/20081202-1_0.c: Ditto.
+	* gcc.dg/lto/20090210_0.c: Ditto.
+	* gcc.dg/lto/20081202-2_0.c: Ditto.
+	* gcc.dg/lto/20081204-1_0.c: Ditto.
+	* gcc.dg/lto/20081204-2_0.c: Use renamed options and dg-skip-if.
+	* gcc.dg/lto/20090213_0.c: Use renamed option.
+	* gcc.dg/lto/20081024_0.c: Ditto.
+	* gcc.dg/lto/20081224_0.c: Ditto.
+	* gcc.dg/lto/20081109_0.c: Ditto.
+	* gcc.dg/lto/20090219_0.c: Ditto.
+	* g++.dg/lto/20081120-1_0.C: Ditto.
+	* g++.dg/lto/20081120-2_0.C: Ditto.
+	* g++.dg/lto/20090311-1_0.C: Ditto.
+	* g++.dg/lto/20090112_0.C: Ditto.
+	* g++.dg/lto/20081123_0.C: Ditto.
+	* g++.dg/lto/20080910-1_0.C: Ditto.
+	* g++.dg/lto/20090313_0.C: Ditto.
+	* g++.dg/lto/20081125_0.C: Ditto.
+	* g++.dg/lto/20081008_0.C: Ditto.
+	* g++.dg/lto/20081109-1_0.C: Ditto.
+	* g++.dg/lto/20080912-1_0.C: Ditto.
+	* g++.dg/lto/20081109-2_0.C: Ditto.
+	* g++.dg/lto/20090315_0.C: Ditto.
+	* g++.dg/lto/20081209_0.C: Ditto.
+	* g++.dg/lto/20080912_0.C: Ditto.
+	* g++.dg/lto/20080915_0.C: Ditto.
+	* g++.dg/lto/20080916_0.C: Ditto.
+	* g++.dg/lto/20080917_0.C: Ditto.
+	* g++.dg/lto/20081118-1_0.C: Ditto.
+	* g++.dg/lto/20090128_0.C: Ditto.
+	* g++.dg/lto/20081219_0.C: Ditto.
+	* g++.dg/lto/20080924_0.C: Ditto.
+	* g++.dg/lto/20080908-1_0.C: Ditto.
+	* g++.dg/lto/20080908-2_0.C: Ditto.
+	* g++.dg/lto/20080926_0.C: Ditto.
+	* g++.dg/lto/20080908-3_0.C: Ditto.
+	* g++.dg/lto/20081204-1_0.C: Ditto.
+	* g++.dg/lto/20081204-2_0.C: Ditto.
+	* g++.dg/lto/20081023_0.C: Ditto.
+	* g++.dg/lto/20090221_0.C: Ditto.
+	* g++.dg/lto/20090302_0.C: Ditto.
+	* g++.dg/lto/20090303_0.C: Ditto.
+	* g++.dg/lto/20090106_0.C: Ditto.
+	* g++.dg/lto/20081119-1_0.C: Ditto.
+	* g++.dg/lto/20081118_0.C: Ditto.
+	* g++.dg/lto/20080904_0.C: Ditto.
+	* g++.dg/lto/20080909-1_0.C: Ditto.
+	* g++.dg/lto/20080907_0.C: Ditto.
+	* g++.dg/lto/20080709_0.C: Ditto.
+	* g++.dg/lto/20080829_0.C: Ditto.
+
+2009-06-09  Jan Hubicka  <jh@suse.cz>
+
+	* gcc.dg/ipa/ipa.exp: Re-enable
+
+2009-06-02  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/ipa/ipa.exp: Disable temporarily.
+
+2009-05-21  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/lto.exp: Call check_effective_target_lto.
+	* g++.dg/lto/lto.exp: Call check_effective_target_lto.
+
+2009-05-19  Diego Novillo  <dnovillo@google.com>
+
+	* lib/target-supports.exp (check_effective_target_lto): New.
+	* lib/c-torture.exp: Call it to set LTO_TORTURE_OPTIONS.
+	* lib/gcc-dg.exp: Likewise.
+	* lib/torture-options.exp (set-torture-options): Add 3rd
+	argument.  Append it to 'torture_with_loops' and
+	'torture_without_loops'.
+	* gcc.c-torture/execute/execute.exp: Add LTO_TORTURE_OPTIONS 
+	when calling set-torture-options.
+	* gcc.c-torture/execute/builtins/builtins.exp: Likewise.
+	* gcc.c-torture/execute/ieee/ieee.exp: Likewise.
+	* gcc.c-torture/unsorted/unsorted.exp: Likewise.
+	* gcc.target/i386/math-torture/math-torture.exp: Likewise.
+	* gcc.target/x86_64/abi/abi-x86_64.exp: Likewise.
+	* gcc.target/x86_64/abi/avx/abi-avx.exp: Likewise.
+	* gcc.misc-tests/i386-prefetch.exp: Likewise.
+	* gcc.misc-tests/dectest.exp: Likewise.
+
+2009-05-15  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20090206-1_0.c: Add -fPIC.
+
+2009-04-01  Rafael Avila de Espindola  <espindola@google.com>
+
+	* g++.dg/lto/20080909-1_0.C:  Don't use -flto-single.
+	* g++.dg/lto/20080917_0.C:  Don't use -flto-single.
+	* g++.dg/lto/20080924_0.C:  Don't use -flto-single.
+	* g++.dg/lto/20080926_0.C:  Don't use -flto-single.
+	* g++.dg/lto/20081008_0.C:  Don't use -flto-single.
+	* g++.dg/lto/20081120-1_0.C:  Don't use -flto-single.
+	* g++.dg/lto/20081120-2_0.C:  Don't use -flto-single.
+	* gcc.dg/lto/20080917_0.c:  Don't use -flto-single.
+	* gcc.dg/lto/20080924_0.c:  Don't use -flto-single.
+	* gcc.dg/lto/20081109_0.c:  Don't use -flto-single.
+	* gcc.dg/lto/20081120-1_0.c:  Don't use -flto-single.
+	* gcc.dg/lto/20081126_0.c:  Don't use -flto-single.
+	* gcc.dg/lto/20081204-2_0.c:  Don't use -flto-single.
+	* lib/lto.exp (lto_init): Don't use -flto-single.
+
+2009-03-26  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20090315_0.C:
+	* g++.dg/lto/20090315_1.C:
+
+2009-03-15  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20090313_0.C: Add -fPIC.
+
+2009-03-14  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20090311-1.h: New.
+	* g++.dg/lto/20090311-1_0.C: New.
+	* g++.dg/lto/20090311-1_1.C: New.
+	* g++.dg/lto/20090312.h: New.
+	* g++.dg/lto/20090312_0.C: New.
+	* g++.dg/lto/20090312_1.C: New.
+
+2009-03-14  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20090313_0.C: New.
+	* g++.dg/lto/20090313_1.C: New.
+
+2009-03-13  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20090313_0.c: New.
+
+2009-03-12  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20090312_0.c: New.
+	* gcc.dg/lto/20090312_1.c: New.
+
+2009-03-11  Rafael Avila de Espindola  <espindola@google.com>
+
+	* g++.dg/lto/20090311_0.C: New.
+	* g++.dg/lto/20090311_1.C: New.
+
+2009-03-10  Diego Novillo  <dnovillo@google.com>
+
+	Revert:
+
+	2009-03-09  Simon Baldwin  <simonb@google.com>
+
+		* g++.dg/lto/20090302_0.C: New.
+		* g++.dg/lto/20090302_1.C: New.
+
+2009-03-10  Rafael Avila de Espindola  <espindola@google.com>
+
+	* g++.dg/lto/20090309_0.C: New.
+	* g++.dg/lto/20090309_1.C: New
+
+2009-03-09  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.c-torture/execute/builtins/strlen-3.c: Fix ODR issue
+	for inside_main.
+	* gcc.dg/lto/20081204-1_0.c: Fix ODR issue for i.
+
+2009-03-09  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20090302_0.C: New.
+	* g++.dg/lto/20090302_1.C: New.
+
+2009-03-04  Rafael Avila de Espindola  <espindola@google.com>
+
+	* g++.dg/lto/20090303_0.C: New.
+
+2009-02-24  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20090218-2_0.c: New.
+	* gcc.dg/lto/20090218-2_1.c: New.
+
+2009-02-23  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc/testsuite/gcc.dg/lto/20090218-1_0.c: New.
+	* gcc/testsuite/gcc.dg/lto/20090218-1_1.c: New.
+
+2009-02-22  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20090219_0.c: Add -fPIC.
+	* g++.dg/lto/20090221_0.C: New.
+
+2009-02-20  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20090219_0.c: New.
+
+2009-02-19  Diego Novillo  <dnovillo@google.com>
+
+	Revert
+
+	2009-02-19  Rafael Avila de Espindola  <espindola@google.com>
+
+		* gcc.dg/lto/20090218-1_0.c: New.
+		* gcc.dg/lto/20090218-1_1.c: New.
+		* gcc.dg/lto/20090218-2_0.c: New.
+		* gcc.dg/lto/20090218-2_1.c: New.
+
+2009-02-19  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20090218-1_0.c: New.
+	* gcc.dg/lto/20090218-1_1.c: New.
+	* gcc.dg/lto/20090218-2_0.c: New.
+	* gcc.dg/lto/20090218-2_1.c: New.
+
+2009-02-18  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/opt/thunk3-1.C: Rename from thunk3.C
+
+2009-02-18  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20090218_0.c: New.
+	* gcc.dg/lto/20090218_1.c: New.
+	* gcc.dg/lto/20090218_2.c: New.
+	* gcc.dg/lto/20090218_3.c: New.
+
+2009-02-13  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20090213_0.c: New.
+	* gcc.dg/lto/20090213_1.c: New.
+
+2009-02-10  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20090210_0.c: New.
+	* gcc.dg/lto/20090210_1.c: New.
+
+2009-02-10  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20090206-1_0.c: New.
+	* gcc.dg/lto/20090206-2_0.c: New.
+
+2009-02-09  Simon Baldwin  <simonb@google.com>
+
+	* lib/lto.exp (lto-get-options-main): Add support for suppressing
+	flags at the link stage with dg-suppress-ld-options.
+	(lto-execute): Filter option to remove any members of
+	dg-suppress-ld-options prior to lto-link-and-maybe-run.
+
+2009-01-31  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/opt/thunk3.C: New.
+	* g++.dg/opt/thunk4.C: New.
+
+2009-01-28  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20090128_0.C: New test.
+
+2009-01-26  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20090126-1_0.c: New.
+	* gcc.dg/lto/20090126-2_0.c: New.
+
+2009-01-21  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/20090121-1.C: New.
+
+2009-01-21  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20090120_0.c: New.
+
+2009-01-20  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20090116_0.c: New.
+
+2009-01-17  Simon Baldwin  <simonb@google.com>
+
+	* lib/lto.exp (lto-obj): Let OPTFILE options override OPTALL.
+	(lto-link-and-maybe-run): Ditto.
+
+2009-01-13  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/ipa/20090113-1.C: New.
+
+2009-01-12  Chris Demetriou  <cgd@google.com>
+
+	* g++.dg/lto/20090112_0.C: New.
+
+2009-01-08  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/20090107-1.C: New.
+
+2009-01-06  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20090106_0.C: New.
+
+2009-01-05  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20081224_0.c: Add -fPIC.
+
+2009-01-05  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20081224_0.h: New.
+	* gcc.dg/lto/20081224_0.c: New.
+	* gcc.dg/lto/20081224_1.c: New.
+
+2008-12-23  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/20081223-1.c: New.
+
+2008-12-22  Chris Demetriou  <cgd@google.com>
+
+	* gcc.dg/lto/20081222_0.c: New.
+	* gcc.dg/lto/20081222_1.c: New.
+	* gcc.dg/lto/20081222_0.h: New.
+
+2008-12-19  Rafael Avila de Espindola  <espindola@google.com>
+
+	* g++.dg/lto/20081219_0.C: New.
+	* g++.dg/lto/20081219_1.C: New.
+
+2008-12-17  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20081217-1_0.C: New.
+	* g++.dg/lto/20081217-2_0.C: New.
+
+2008-12-17  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc.dg/exceptions.c: New.
+
+2008-12-14  Doug Kwan  <dougkwan@google.com>
+
+	* g++.dg/lto/20081211-1.h: New.
+	* g++.dg/lto/20081211-1_0.C: New.
+	* g++.dg/lto/20081211-1_1.C: New.
+
+2008-12-14  Doug Kwan  <dougkwan@google.com>
+
+	* gcc.dg/lto/20081212-1_0.c: New.
+	* lib/lto.exp (lto-get-options-main): Handle dg-final.
+	(lto-execute): Execute any final code in test.
+	(scan-symbol): New.
+
+2008-12-11  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20081210-1_0.c: Fix for 64bit hosts.
+
+2008-12-10  Doug Kwan  <dougkwan@google.com>
+
+	* gcc.dg/lto/20081210-1_0.c: New test.
+
+2008-12-09  Diego Novillo  <dnovillo@google.com>
+
+	* testsuite/gcc.dg/lto/20081204-1_0.c: Add -fPIC.
+	* testsuite/gcc.dg/lto/20081204-2_0.c: Likewise.
+	* testsuite/g++.dg/lto/20081204-1_0.C: Likewise.
+
+2008-12-09  Doug Kwan  <dougkwan@google.com>
+
+	* g++.dg/lto/20081209_0.C: New.
+	* g++.dg/lto/20081209_1.C: New.
+
+2008-12-04  Doug Kwan  <dougkwan@google.com>
+
+	* g++.dg/lto/20081204-2_0.C: New
+	* g++.dg/lto/20081204-2_1.C: New
+
+2008-12-04  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20081204-2_0.c: New.
+
+2008-12-04  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20081203_0.C: New.
+	* g++.dg/lto/20081203_1.C: New.
+
+2008-12-04  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20081204-1_0.c: New.
+	* gcc.dg/lto/20081204-1_1.c: New.
+	* g++.dg/lto/20081204-1_0.C: New.
+	* g++.dg/lto/20081204-1_1.C: New.
+
+2008-12-02  Doug Kwan  <dougkwan@google.com>
+
+	* gcc.dg/lto/20081202-1_0.c: New.
+	* gcc.dg/lto/20081202-1_1.c: New.
+	* gcc.dg/lto/20081202-2_0.c: New.
+	* gcc.dg/lto/20081202-2_1.c: New.
+
+2008-12-02  Doug Kwan  <dougkwan@google.com>
+	
+	* gcc.dg/lto/20081201-1_0.c: New.
+	* gcc.dg/lto/20081201-1_1.c: New.
+	* gcc.dg/lto/20081201-1_2.c: New.
+	* gcc.dg/lto/20081201-2_0.c: New.
+	* gcc.dg/lto/20081201-2_1.c: New.
+
+2008-11-29  Diego Novillo  <dnovillo@google.com>
+
+	* lib/lto.exp: Do not set dg-do-what-default.
+
+2008-11-27  Diego Novillo  <dnovillo@google.com>
+
+	* lib/lto.exp (lto_init): New.
+	Initialize LTO_OPTIONS if not set.
+	(lto-execute): Set dg-do-what-default to run.
+	If the first file does not define dg-options, set
+	option_list to LTO_OPTIONS.
+	* gcc.dg/lto/lto.exp: Call lto_init.
+	* g++.dg/lto/lto.exp: Likewise.
+	* gcc.dg/lto/20081125_0.c: Remove dg-options and dg-do
+	commands.
+	* g++.dg/lto/20080917_0.C: Brace dg-options.
+	* g++.dg/lto/20080924_0.C: Likewise.
+	* g++.dg/lto/20080926_0.C: Likewise.
+
+2008-11-27  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20081127_0.C: New.
+	* g++.dg/lto/20081127_1.C: New.
+
+2008-11-26  Doug Kwan  <dougkwan@google.com>
+
+	* g++.dg/lto/20081125.h: New.
+	* g++.dg/lto/20081125_0.C: New.
+	* g++.dg/lto/20081125_1.C: New.
+
+2008-11-26  Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/20081126_0.c: New.
+
+2008-11-25  Rafael Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20081125_0.c: New.
+	* gcc.dg/lto/20081125_1.c: New.
+
+2008-11-24  Doug Kwan  <dougkwan@google.com>
+
+	* g++.dg/lto/20081123_0.C: New.
+	* g++.dg/lto/20081123_1.C: New.
+
+2008-11-20  Doug Kwan  <dougkwan@google.com>
+
+	* gcc.dg/lto/20081120-1_0.c: New.
+	* gcc.dg/lto/20081120-1_1.c: New.
+	* gcc.dg/lto/20081120-2_0.c: New.
+	* gcc.dg/lto/20081120-2_1.c: New.
+	* g++.dg/lto/20081120-1_0.C: New.
+	* g++.dg/lto/20081120-1_1.C: New.
+	* g++.dg/lto/20081120-2_0.C: New.
+	* g++.dg/lto/20081120-2_1.C: New.
+
+2008-11-20  Rafael Espindola  <espindola@google.com>
+	    Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20081119_0.C: New.
+	* g++.dg/lto/20081119_1.C: New.
+	* g++.dg/opt/devirt1.C: Do not scan for the devirtualized
+	call.
+
+2008-11-19  Doug Kwan  <dougkwan@google.com>
+
+	* g++.dg/lto/20081119-1.h: New.
+	* g++.dg/lto/20081119-1_0.C: New.
+	* g++.dg/lto/20081119-1_1.C: New.
+
+2008-11-19  Rafael Espindola  <espindola@google.com>
+
+	* g++.dg/lto/20081118-1_0.C: Fix dg-link.
+	* g++.dg/lto/20081118-1_1.C: Fix dg-link.
+
+2008-11-19  Rafael Espindola  <espindola@google.com>
+
+	Files missing from 141997.
+	* g++.dg/lto/20081118-1_0.C: New.
+	* g++.dg/lto/20081118-1_1.C: New.
+
+2008-11-18  Rafael Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20081118_0.C: New.
+	* gcc.dg/lto/20081118_1.C: New.
+
+2008-11-18  Doug Kwan  <dougkwan@google.com>
+
+	* gcc.dg/lto/20081118_0.c: New.
+	* gcc.dg/lto/20081118_1.c: New.
+	* gcc.dg/lto/20081118_2.c: New.
+	* g++.dg/lto/20081118_0.C: New.
+	* g++.dg/lto/20081118_1.C: New.
+	* g++.dg/lto/20081118_2.C: New.
+
+2008-11-18  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20081115_0.c: New.
+	* gcc.dg/lto/20081115_1.c: New.
+	* gcc.dg/lto/20081115_2.c: New.
+	* gcc.dg/lto/20080924_0.c: Brace dg-options properly.
+	* gcc.dg/lto/20080917_0.c: Likewise.
+	* gcc.dg/lto/20081111_0.c: Likewise.
+	* gcc.dg/lto/20081112_0.c: Likewise.
+
+2008-11-12  Doug Kwan  <dougkwan@google.com>
+
+	* gcc.dg/lto/20081111_0.c: New.
+	* gcc.dg/lto/20081111_0.c: New.
+	* gcc.dg/lto/20081112_1.c: New.
+	* gcc.dg/lto/20081112_1.c: New.
+
+2008-11-09  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20081109-2_0.C: New.
+
+2008-11-09  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20081109_0.c: New.
+
+2008-11-09  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20081109-1_0.C: New.
+	* g++.dg/lto/20081109_0.C: New.
+	* g++.dg/lto/20081109_1.C: New.
+	* lib/lto.exp (lto-get-options-main): Add support for
+	adding extra flags to the link stage with
+	dg-extra-ld-options.
+	(lto-execute): Use dg-extra-ld-options when calling
+	lto-link-and-maybe-run.
+
+2008-11-07  Diego Novillo  <dnovillo@google.com>
+
+	* lib/lto.exp: Fix copyright years.
+	(lto-get-options-main): Support dg-do link.
+	* g++.dg/lto/20081022.h: New.
+	* g++.dg/lto/20081022_0.C: New.
+	* g++.dg/lto/20081023_0.C: New.
+	* g++.dg/lto/20081022_1.C: New.
+
+2008-11-07  Diego Novillo  <dnovillo@google.com>
+
+	* lib/lto.exp: New.
+	* gcc.dg/lto/lto.exp: Use multi-file support from lib/lto.exp.
+	* g++.dg/lto/lto.exp: Use multi-file support from lib/lto.exp
+	* g++.dg/lto/README: New.
+	* gcc.dg/lto/README: New.
+	* g++.dg/lto/20080709_0.C: Rename from 20080709.C.
+	* g++.dg/lto/20080829_0.C: Rename from 20080829.C.
+	* g++.dg/lto/20080904_0.C: Rename from 20080904.C.
+	* g++.dg/lto/20080907_0.C: Rename from 20080907.C.
+	* g++.dg/lto/20080908-1_0.C: Rename from 20080908-1.C
+	* g++.dg/lto/20080908-2_0.C: Rename from 20080908-2.C.
+	* g++.dg/lto/20080908-3_0.C: Rename from 20080908-3.C.
+	* g++.dg/lto/20080909-1_0.C: Rename from 20080909-1.C.
+	* g++.dg/lto/20080910-1_0.C: Rename from 20080910-1.C.
+	* g++.dg/lto/20080912-1_0.C: Rename from 20080912-1.C.
+	* g++.dg/lto/20080912_0.C: Rename from 20080912.C.
+	* g++.dg/lto/20080915_0.C: Rename from 20080915.C.
+	* g++.dg/lto/20080916_0.C: Rename from 20080916.C.
+	* g++.dg/lto/20080917_0.C: Rename from 20080917.C.
+	* g++.dg/lto/20080924_0.C: Rename from 20080924.C.
+	* g++.dg/lto/20080926_0.C: Rename from 20080926.C.
+	* g++.dg/lto/20081008_0.C: Rename from 20081008.C.
+	* gcc.dg/lto/20080908_0.c: Rename from 20080908.c.
+	* gcc.dg/lto/20080917_0.c: Rename from 20080917.c.
+	* gcc.dg/lto/20080924_0.c: Rename from 20080924.c.
+	* gcc.dg/lto/20081024_0.c: Rename from 20081024.c.
+
+2008-10-24  Cary Coutant  <ccoutant@google.com>
+
+	* gcc.dg/lto/20081024.c: New test.
+
+2008-10-16  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/debug/debug.exp: Fix -flto options
+	* gcc.dg/vect/costmodel/ppc/ppc-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/costmodel/spu/spu-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/costmodel/i386/i386-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/costmodel/x86_64/x86_64-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/vect.exp: Likewise.
+	* gcc.misc-tests/dectest.exp: Likewise.
+	* g++.dg/debug/debug.exp: Likewise.
+	* g++.dg/vect/vect.exp: Likewise.
+
+
+2008-10-13  Ollie Wild  <aaw@google.com>
+	    Diego Novillo  <dnovillo@google.com>
+
+	* lib/c-torture.exp: Add "-O2 -fwhopr" and "-O0 -fwhopr".
+	* lib/gcc-dg.exp: Likewise.
+
+2008-10-10  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.target/i386/i386.exp: Add -flto by default.
+	* gcc.target/i386/math-torture/math-torture.exp: Likewise.
+	* gcc.dg/matrix/matrix.exp: Likewise.
+	* gcc.dg/struct/struct-reorg.exp: Likewise.
+	* gcc.dg/debug/debug.exp: Likewise.
+	* gcc.dg/vect/costmodel/ppc/ppc-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/costmodel/spu/spu-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/costmodel/i386/i386-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/costmodel/x86_64/x86_64-costmodel-vect.exp: Likewise.
+	* gcc.dg/vect/vect.exp: Likewise.
+	* gcc.misc-tests/dectest.exp: Likewise.
+	* g++.dg/debug/debug.exp: Likewise.
+	* g++.dg/vect/vect.exp: Likewise.
+	* g++.dg/pch/pch.exp: Likewise.
+	* lib/c-torture.exp: Likewise.
+	* lib/gcc-dg.exp: Likewise.
+
+2008-10-09  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20080924.c: Add -O2.
+	* gcc.dg/lto/20080917.c: Add -O2.
+	* g++.dg/lto/20080924.C: Add -O2.
+	* g++.dg/lto/20080917.C: Add -O2.
+	* g++.dg/lto/20080926.C: Add -O2.
+
+2008-10-08  Doug Kwan  <dougkwan@google.com>
+
+	* g++.dg/lto/20081008.C: New test.
+
+2008-10-06  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/lto.exp: Remove -O2 from DEFAULT_LTOFLAGS.
+	* g++.dg/lto/lto.exp: Likewise.
+
+2008-09-28  Simon Baldwin  <dnovillo@google.com>
+
+	* g++.dg/lto/20080926.C: New.
+
+2008-09-24  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/20080924.c: New.
+
+2008-09-24  Diego Novillo  <dnovillo@google.com>
+	    Simon Baldwin  <simonb@google.com>
+
+	* gcc.dg/lto/lto.exp: Replace DEFAULT_CFLAGS with
+	DEFAULT_LTOFLAGS.
+	* gcc.dg/lto/20080917.c: New.
+	* g++.dg/dg.exp: Prune tests under lto.
+	* g++.dg/lto/lto.exp: Replace DEFAULT_CXXFLAGS with
+	DEFAULT_LTOFLAGS
+	* g++.dg/lto/20080917.C: New.
+
+2008-09-16  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080915.C: New test.
+
+2008-09-16  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20080916.C: move to g++.dg.
+	* g++.dg/lto/20080916.C: moved from g++.dg.
+
+2008-09-16  Rafael Avila de Espindola  <espindola@google.com>
+
+	* gcc.dg/lto/20080916.C: New.
+
+2008-09-12  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080912-1.C: New.
+
+2008-09-12  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080912.C: New.
+
+2008-09-11  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080910-1.C: New test.
+
+2008-09-09  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080909-1.C: New.
+
+2008-09-08  Diego Novillo  <dnovillo@google.com>
+
+	Bring from mainline @140111
+
+	2008-09-08  Richard Guenther  <rguenther@suse.de>
+
+		PR tree-optimization/37421
+		* g++.dg/torture/pr37421.C: New testcase.
+
+	* gcc.dg/lto/lto.exp: Add -pedantic-errors.
+	* g++.dg/lto/lto.exp: Likewise.
+	* g++.dg/lto/20080908-1.C: Fix return value of main().
+	* g++.dg/lto/20080908-3.C: Likewise.
+
+2008-09-08  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080908-3.C: New test.
+
+2008-09-08  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080908-2.C: New test.
+
+2008-09-08  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20080908-1.C: Rename from 20080908.C
+
+2008-09-08  Diego Novillo  <dnovillo@google.com>
+
+	* g++.dg/lto/20080709.C: Rename from lto1.C.
+	* g++.dg/lto/20080829.C: Rename from lto2.C.
+	* g++.dg/lto/20080904.C: Rename from lto3.C.
+	* g++.dg/lto/20080907.C: Rename from lto4.C.
+
+2008-09-08  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/lto/20080908.C: New.
+
+2008-09-08  Diego Novillo  <dnovillo@google.com>
+
+	* gcc.dg/lto/lto.exp: New.
+	* gcc.dg/lto/20080908.c: New test.
+	* g++.dg/other/lto1.C: Move to g++.dg/lto
+	* g++.dg/other/lto2.C: Likewise.
+	* g++.dg/other/lto3.C: Likewise.
+	* g++.dg/other/lto4.C: Likewise.
+	* g++.dg/lto/lto.exp: New.
+	* g++.dg/README: Document lto directory.
+
+2008-09-07  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/other/lto4.C: New test.
+
+2008-09-04  Bill Maddox  <maddox@google.com>
+
+	* g++.dg/other/lto3.C:  New test.
+
+2008-08-29  Simon Baldwin  <simonb@google.com>
+
+	* g++.dg/other/lto2.C: New test.
+
+2008-08-14  Rafael Avila de Espindola  <espindola@google.com>
+
+	Files missing from the previous commit.
+
+	* gcc.dg/visibility-14.c: New test.
+	* gcc.dg/visibility-15.c: New test.
+	* gcc.dg/visibility-16.c: New test.
+	* gcc.dg/visibility-17.c: New test.
+	* gcc.dg/visibility-18.c: New test.
+	* gcc.dg/visibility-19.c: New test.
+
+2008-07-09  Rafael Espindola  <espindola@google.com>
+
+	* g++.dg/other/lto1.C: New.
+
+2007-10-19  Diego Novillo  <dnovillo@google.com>
+
+	* lib/c-torture.exp (TORTURE_OPTIONS): Add -flto for -O2 compiles.
+
+2007-10-05  Diego Novillo  <dnovillo@google.com>
+
+	* lib/gcc-dg.exp: Enable -flto at -O2.
